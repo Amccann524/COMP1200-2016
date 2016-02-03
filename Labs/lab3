@@ -1,0 +1,73 @@
+
+Answer these questions about the state machine above.
+
+List all possible inputs. How many do we have?
+-nothing
+-nickel
+-dime
+-quarter
+4 inputs
+
+List all possible states. How many do we have?
+-nothing
+-5 cents
+-10 cents
+-15 cents
+-20 cents
+-25 cents
+6 states
+
+The output bits are: vend and return nickel, return dime, return quarter, return all.
+
+How many bits for state will you need?
+3 bits
+
+How many input bits will you need?
+2 bits
+
+Assign states to bits, inputs to bits and use a bit for each output.
+
+Write out a state-transition table.
+
+State      input          next     vend     return      hex
+000         00            000       0        000        
+000         01            001       0        000
+000         10            010       0        000
+000         11            111       1        000
+
+001         00            001       0        000
+001         01            010       0        000
+001         10            011       0        000
+001         11            111       1        001
+
+010         00            010       0        000
+010         01            011       0        000
+010         10            100       0        000
+010         11            111       0        010
+
+011         00            011       0        000
+011         01            100       0        000
+011         10            111       1        000
+011         11            111       1        011
+
+100         00            100       0        000
+100         01            111       1        000
+100         10            111       1        001
+100         11            111       1        100
+
+
+
+
+
+
+
+
+
+
+
+
+How many bits will we need for ROM address?
+
+How many bits will we need for ROM data?
+
+Finally, use a ROM to implement said thing.
